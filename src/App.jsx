@@ -1,9 +1,9 @@
-import Fruits from "./Fruits";
+import Message from "./components/Message";
 
 function App() {
   return (
     <div className="App">
-      <Fruits />
+      <Message />
     </div>
   );
 }

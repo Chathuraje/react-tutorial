@@ -1,9 +1,11 @@
-import UseEffects from "./components/UseEffects";
+import FetchCatData from "./components/FetchCatData";
+import FetchDataWithInputs from "./components/FetchDataWithInputs";
 
 function App() {
   return (
     <div className="App">
-      <UseEffects />
+      <FetchCatData />
+      <FetchDataWithInputs />
     </div>
   );
 }

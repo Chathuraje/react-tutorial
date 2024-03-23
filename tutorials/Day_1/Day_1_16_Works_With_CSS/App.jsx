@@ -1,9 +1,9 @@
-import UseEffects from "./components/UseEffects";
+import Header from "./Header";
 
 function App() {
   return (
     <div className="App">
-      <UseEffects />
+      <Header />
     </div>
   );
 }

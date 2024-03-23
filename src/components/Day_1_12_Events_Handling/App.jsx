@@ -1,9 +1,9 @@
-import Counter from "./components/Counter";
+import Message from "./Message";
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <Message />
     </div>
   );
 }

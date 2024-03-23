@@ -1,11 +1,7 @@
+import Fruit from "./Fruit";
+
 export default function Fruits() {
-  const prices = [10, 20, 30, 40, 50];
-  const discount = prices.map((prices) => prices * 0.9);
-  console.log(discount);
-
-  const fruitsArray = ["Apple", "Banana", "Orange", "Mango"];
-
-  const fruitsObject = [
+  const fruits = [
     { name: "Apple", price: 10, emoji: "🍎" },
     { name: "Banana", price: 30, emoji: "🍌" },
     { name: "Orange", price: 40, emoji: "🍊" },
@@ -16,19 +12,10 @@ export default function Fruits() {
 
   return (
     <div>
-      <h1>Fruits: Render Array Using Map</h1>
+      <h1>Fruits</h1>
       <ul>
-        {fruitsArray.map((fruit) => (
-          <li key={fruit}>{fruit}</li>
-        ))}
-      </ul>
-
-      <h1>Fruits: Render Object Using Map</h1>
-      <ul>
-        {fruitsObject.map((fruit) => (
-          <li key={fruit.name}>
-            {fruit.emoji} {fruit.name} ${fruit.price}
-          </li>
+        {fruits.map((fruit) => (
+          <Fruit key={fruit.name} fruit={fruit} />
         ))}
       </ul>
     </div>

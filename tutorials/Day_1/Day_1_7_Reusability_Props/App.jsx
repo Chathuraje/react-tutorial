@@ -1,4 +1,4 @@
-import Hello from "./Hello";
+import Hello from "./components/Hello";
 
 function App() {
   const seatNumbers = [1, 2, 3, 4];

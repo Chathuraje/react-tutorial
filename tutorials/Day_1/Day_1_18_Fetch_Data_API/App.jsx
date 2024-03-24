@@ -1,5 +1,5 @@
-import FetchCatData from "./FetchCatData";
-import FetchDataWithInputs from "./FetchDataWithInputs";
+import FetchCatData from "./components/FetchCatData";
+import FetchDataWithInputs from "./components/FetchDataWithInputs";
 
 function App() {
   return (

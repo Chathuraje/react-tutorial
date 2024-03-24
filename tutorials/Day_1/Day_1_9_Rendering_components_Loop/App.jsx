@@ -1,4 +1,4 @@
-import Fruits from "./Fruits";
+import Fruits from "./components/Fruits";
 
 function App() {
   return (

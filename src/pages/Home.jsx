@@ -1,28 +1,13 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import Cats from "../components/Cats";
+import { Form } from "../components/Form";
 
 export default function Home() {
-  const client = new QueryClient({
-    defaultOptions: {
-      queries: {
-        refetchOnWindowFocus: false,
-      },
-    },
-  });
-
   return (
     <div>
-      <center>
-        <h1>Welcome to the Home Page!</h1>
-      </center>
-
-      <QueryClientProvider client={client}>
-        <div>
-          <center>
-            <Cats />
-          </center>
-        </div>
-      </QueryClientProvider>
+      <h1>Home</h1>
+      <p>Welcome to the Home page!</p>
+      <div>
+        <Form />
+      </div>
     </div>
   );
 }

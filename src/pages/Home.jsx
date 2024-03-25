@@ -1,16 +1,17 @@
-import { Text } from "../components/Text";
-import { useToggle } from "./../contexts/useToggle";
+import { Person } from "../components/Person";
 
 export default function Home() {
-  const { isVisible, toggle } = useToggle();
   return (
     <div>
       <h1>Home</h1>
-      <p>Welcome to the Home page!</p>
-      <div>
-        <button onClick={toggle}>{isVisible ? "Hide" : "Show"} Form</button>
-        {isVisible && <Text />}
-      </div>
+
+      <Person
+        name="Alice"
+        emails="alice@gmail.com"
+        age={25}
+        isMarried={true}
+        friends={["Chathura", "Jake", "Nore"]}
+      />
     </div>
   );
 }

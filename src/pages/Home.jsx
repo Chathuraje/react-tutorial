@@ -1,10 +1,10 @@
-import { Counter } from "../components/Counter";
+import { Users } from "../components/Users";
 
 const Home = () => {
   return (
     <div>
-      <h1>Counter</h1>
-      <Counter />
+      <h1>Search</h1>
+      <Users />
     </div>
   );
 };

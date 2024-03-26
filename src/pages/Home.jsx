@@ -1,7 +1,12 @@
-import React, { Component } from "react";
+import { Counter } from "../components/Counter";
 
-export default class Home extends Component {
-  render() {
-    return <div>This is Home</div>;
-  }
-}
+const Home = () => {
+  return (
+    <div>
+      <h1>Counter</h1>
+      <Counter />
+    </div>
+  );
+};
+
+export default Home;

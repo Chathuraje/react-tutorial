@@ -1,12 +1,7 @@
-import { Users } from "../components/Users";
-
-const Home = () => {
+export const Home = () => {
   return (
     <div>
-      <h1>Search</h1>
-      <Users />
+      <h1>Home</h1>
     </div>
   );
 };
-
-export default Home;

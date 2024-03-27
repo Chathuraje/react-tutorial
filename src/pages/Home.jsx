@@ -1,32 +1,19 @@
-import { useLayoutEffect, useState } from "react";
+import { Button, TextField, AppBar, Toolbar, Typography } from '@mui/material';
 
-const userIds = [1, 2];
-
-export const Home = () => {
-  const [userId, setUserId] = useState(userIds[0]);
-  const [isAdmin, setIsAdmin] = useState(true);
-
-  // This artifically slows down rendering
-  let now = performance.now();
-  while (performance.now() - now < 200) {
-    // Do nothing for bit
-  }
-
-  useLayoutEffect(() => {
-    setIsAdmin(userId === userIds[0]);
-  }, [userId]);
-
-  const handleChange = () => {
-    const otherId = userIds.find((id) => id !== userId);
-    setUserId(otherId);
-  };
-
+function Home() {
   return (
     <div>
-      <h1>UserID: {userId}</h1>
-      <h3>Admin: {isAdmin ? "true" : "false"}</h3>
-
-      <button onClick={handleChange}>Change User</button>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            My App
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+      <TextField label="Enter your name" />
     </div>
   );
-};
+}
+
+export default Home;

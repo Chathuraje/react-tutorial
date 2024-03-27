@@ -1,22 +1,16 @@
-import { useState } from "react";
-import { useLocalStorage } from "../contexts/useLocalStorage";
+import { useEffect, useRef } from "react";
 
 export const Home = () => {
-  const [value, setValue] = useState("");
-  const { setItem, getItem, deleteItem } = useLocalStorage("value");
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
 
   return (
     <div>
-      <h1>Local Storage</h1>
-
-      <input
-        type="text"
-        value={value}
-        onChange={(event) => setValue(event.target.value)}
-      />
-      <button onClick={() => setItem(value)}>Set</button>
-      <button onClick={() => alert(getItem())}>Get</button>
-      <button onClick={() => deleteItem()}>Remove</button>
+      <h1>useRef Hook</h1>
+      <input ref={inputRef} type="text" placeholder="Type Something....." />
     </div>
   );
 };
